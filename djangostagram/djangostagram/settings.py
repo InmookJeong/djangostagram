@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
-# Used OS, JSON Module
+# Used OS, JSON Module - @Auth InmookJeong
 import os, json
 from django.core.exceptions import ImproperlyConfigured;
 
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# Django Secret Key 가져오기
+# Get Django Secret Key - @Auth InmookJeong
 secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
 with open(secret_file) as f:
@@ -68,10 +68,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangostagram.urls'
 
+# Set Default views directory path - @Auth InmookJeong
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "views")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
