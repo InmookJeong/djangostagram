@@ -1,3 +1,10 @@
+# CUSTOM IGNORES 
+# SecretKey
+**/secrets.json
+
+# venv
+**/djangostagram_venv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
